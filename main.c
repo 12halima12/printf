@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -11,8 +12,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%.*u", 6, 102498402);
-	len2 = printf("%.*u", 6, 102498402);
+	len = _printf("In the middle %.6u of a sentence.\n", 1024);
+	len2 = printf("In the middle %.6u of a sentence.\n", 1024);
 	fflush(stdout);
 	if (len != len2)
 	{
